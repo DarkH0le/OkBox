@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>230882922068-lmgjh36t9d8u0jme944i8uvsi02vsv3f.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.230882922068-lmgjh36t9d8u0jme944i8uvsi02vsv3f</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBvi_kUh-7pXKSQc9Ddn2o-pGI8GFE14Lg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>230882922068</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.darknet.OkBox</string>
+	<key>PROJECT_ID</key>
+	<string>okbox-4a844</string>
+	<key>STORAGE_BUCKET</key>
+	<string>okbox-4a844.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:230882922068:ios:5164b37ab68b5311</string>
+	<key>DATABASE_URL</key>
+	<string>https://okbox-4a844.firebaseio.com</string>
+</dict>
+</plist>
