@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AE5D0243B565870F97323DEF /* Pods_OkBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E888CB2A3EF1663653D15589 /* Pods_OkBoxTests.framework */; };
 		E425F8D1217D2EEE0049D1F6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E425F8D0217D2EEE0049D1F6 /* UIColor+Extension.swift */; };
+		E425F8D3217D3A270049D1F6 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E425F8D2217D3A270049D1F6 /* UITextField+Extension.swift */; };
 		E4579C1B217BE49400EFC04F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4579C1A217BE49400EFC04F /* AppDelegate.swift */; };
 		E4579C1D217BE49400EFC04F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4579C1C217BE49400EFC04F /* ViewController.swift */; };
 		E4579C20217BE49400EFC04F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4579C1E217BE49400EFC04F /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		B23EE70DE19E7A231EAA0B38 /* Pods-OkBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-OkBox/Pods-OkBox.release.xcconfig"; sourceTree = "<group>"; };
 		C8C2B8CAAADCFD52FE1DB0C2 /* Pods-OkBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OkBoxTests/Pods-OkBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		E425F8D0217D2EEE0049D1F6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		E425F8D2217D3A270049D1F6 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		E4579C17217BE49300EFC04F /* OkBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4579C1A217BE49400EFC04F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4579C1C217BE49400EFC04F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				E4579C23217BE49500EFC04F /* LaunchScreen.storyboard */,
 				E4579C26217BE49500EFC04F /* Info.plist */,
 				E425F8D0217D2EEE0049D1F6 /* UIColor+Extension.swift */,
+				E425F8D2217D3A270049D1F6 /* UITextField+Extension.swift */,
 			);
 			path = OkBox;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E425F8D1217D2EEE0049D1F6 /* UIColor+Extension.swift in Sources */,
+				E425F8D3217D3A270049D1F6 /* UITextField+Extension.swift in Sources */,
 				E4579C1D217BE49400EFC04F /* ViewController.swift in Sources */,
 				E4579C1B217BE49400EFC04F /* AppDelegate.swift in Sources */,
 			);
