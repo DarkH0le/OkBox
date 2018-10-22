@@ -8,12 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(r: 247, g: 247, b: 242)
         setupViews()
+        setUpListeners()
     }
     
     
@@ -38,8 +39,8 @@ class ViewController: UIViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
 //        textField.layer.backgroundColor = UIColor.yellow.cgColor
         textField.textColor = UIColor(r: 27, g: 32, b: 33)
-        textField.layer.cornerRadius = 16
         textField.leftViewMode = UITextFieldViewMode.always
+        textField.layer.backgroundColor = UIColor(r: 247, g: 247, b: 242).cgColor
         return textField
     }()
     
@@ -54,11 +55,13 @@ class ViewController: UIViewController {
     
     let registerButton : UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = UIColor.brown
+        button.backgroundColor = UIColor(r: 17, g: 21, b: 21)
         button.setTitle("Register", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.setTitleColor(.white, for: .normal)
+        button.layer.borderWidth = 2.5
+        button.layer.borderColor = UIColor(r: 130, g: 48, b: 56).cgColor
+        button.setTitleColor(UIColor(r: 238, g: 238, b: 238), for: UIControlState.normal)
         
         button.addTarget(self, action: #selector(handleLoginRegister), for: .touchUpInside)
         return button
@@ -75,6 +78,14 @@ class ViewController: UIViewController {
         return image
     }()
     
+    let companyName : UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "ROUND-ONE BOX & FITNESS"
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.font = UIFont(name: "HelveticaNeue-Bold", size: 20)
+        return textField
+    }()
+    
     @objc func handleLoginRegister(){
         self.dismiss(animated: true, completion: nil)
     }
@@ -87,6 +98,7 @@ class ViewController: UIViewController {
         inputContainerView.addSubview(passwordTextField)
         view.addSubview(imageIcon)
         view.addSubview(registerButton)
+        view.addSubview(companyName)
        
         
 //setup constraints
@@ -107,6 +119,7 @@ class ViewController: UIViewController {
         emailTextField.leftAnchor.constraint(equalTo: inputContainerView.leftAnchor).isActive = true
         emailTextField.heightAnchor.constraint(equalTo: inputContainerView.heightAnchor, multiplier: 1/3).isActive = true
         emailTextField.setLeftPaddin(padding: 8)
+        emailTextField.setBottonBorder(color: UIColor.gray)
         
 //PasswordField
         passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor , constant: 16).isActive = true
@@ -115,7 +128,7 @@ class ViewController: UIViewController {
                 passwordTextField.leftAnchor.constraint(equalTo: inputContainerView.leftAnchor).isActive = true
         passwordTextField.heightAnchor.constraint(equalTo: inputContainerView.heightAnchor, multiplier: 1/3).isActive = true
         passwordTextField.setLeftPaddin(padding: 8)
-        passwordTextField.setBottonBorder()
+        passwordTextField.setBottonBorder(color: UIColor.gray)
         
 //RegisterButton
         registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -137,9 +150,22 @@ class ViewController: UIViewController {
         imageIcon.clipsToBounds = true
         imageIcon.layer.borderWidth = 4
         imageIcon.layer.borderColor = UIColor.gray.cgColor
+//CompanyName
+        companyName.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        companyName.centerYAnchor.constraint(equalTo: imageIcon.bottomAnchor , constant: 32).isActive = true
         
-        
-        
+
+    } //End setUpViews()
+    
+    func setUpListeners(){
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.setBottonBorder(color: UIColor(r: 130, g: 48, b: 56))
+    }
+    
+
 }
 

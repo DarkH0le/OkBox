@@ -16,8 +16,8 @@ extension UITextField {
         self.leftViewMode = .always
     }
     
-    func setBottonBorder(){
-        self.layer.shadowColor = UIColor.darkGray.cgColor
+    func setBottonBorder(color:UIColor){
+        self.layer.shadowColor = color.cgColor
         self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
