@@ -7,14 +7,40 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuthUI
+import FirebaseGoogleAuthUI
+import FirebaseFacebookAuthUI
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class LogginPageView: UIViewController, UITextFieldDelegate , FUIAuthDelegate {
 
+    var authUI : FUIAuth?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(r: 247, g: 247, b: 242)
+        self.navigationController?.isNavigationBarHidden = true
         setupViews()
         setUpListeners()
+        setUpLogin()
+        
+    }
+
+    func setUpLogin() {
+        
+        authUI = FUIAuth.defaultAuthUI()
+        authUI?.delegate = self
+        let providers : [FUIAuthProvider] = [FUIGoogleAuth(), FUIFacebookAuth()]
+        authUI?.providers = providers
+        authUI?.isSignInWithEmailHidden = true
+        authUI?.authViewController().view.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        authUI?.authViewController().view.backgroundColor = .clear
+    }
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        if error == nil {
+            loginBotton.setTitle("Logout", for: .normal)
+        }
     }
     
     
@@ -67,6 +93,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return button
     }()
     
+    let loginBotton : UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = UIColor(r: 17, g: 21, b: 21)
+        button.setTitle("Login", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.layer.borderWidth = 2.5
+        button.layer.borderColor = UIColor(r: 130, g: 48, b: 56).cgColor
+        button.setTitleColor(UIColor(r: 238, g: 238, b: 238), for: UIControlState.normal)
+        
+        button.addTarget(self, action: #selector(handleLoginRegister), for: .touchUpInside)
+        return button
+    }()
+    
     let imageIcon : UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "RoundOneLogo.png")
@@ -87,7 +127,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }()
     
     @objc func handleLoginRegister(){
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+//        if let email = emailTextField.text, let password = passwordTextField.text {
+//            Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+//                print(user?.email ?? "no email")
+//                print(Auth.auth().currentUser?.uid ?? "no userid")
+//            }
+//        }
+        
+        if Auth.auth().currentUser == nil {
+            if let authView = authUI?.authViewController(){
+                present(authView, animated: true , completion: nil)
+            }
+        } else {
+            do{
+                try Auth.auth().signOut()
+                loginBotton.setTitle("Login", for: .normal)
+            } catch {}
+        }
     }
     
     func setupViews(){
@@ -99,6 +156,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(imageIcon)
         view.addSubview(registerButton)
         view.addSubview(companyName)
+        view.addSubview(loginBotton)
        
         
 //setup constraints
@@ -131,12 +189,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.setBottonBorder(color: UIColor.gray)
         
 //RegisterButton
-        registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        registerButton.topAnchor.constraint(equalTo: inputContainerView.bottomAnchor, constant: 15  ).isActive = true
+//        registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        registerButton.leftAnchor.constraint(equalTo: inputContainerView.leftAnchor).isActive = true
+        registerButton.topAnchor.constraint(equalTo: inputContainerView.bottomAnchor, constant: 16  ).isActive = true
         registerButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        registerButton.widthAnchor.constraint(equalTo: inputContainerView.widthAnchor).isActive = true
+        registerButton.widthAnchor.constraint(equalTo: inputContainerView.widthAnchor , multiplier: 2/5).isActive = true
+        registerButton.leftAnchor.constraint(equalTo: inputContainerView.leftAnchor, constant: 16).isActive = true
         registerButton.layer.shadowOffset = CGSize.zero
         registerButton.layer.cornerRadius = 16
+        
+//LoginBotton
+        //        registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        loginBotton.leftAnchor.constraint(equalTo: registerButton.rightAnchor).isActive = true
+        loginBotton.topAnchor.constraint(equalTo: inputContainerView.bottomAnchor, constant: 16  ).isActive = true
+        loginBotton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        loginBotton.widthAnchor.constraint(equalTo: inputContainerView.widthAnchor , multiplier: 2/5).isActive = true
+        loginBotton.rightAnchor.constraint(equalTo: inputContainerView.rightAnchor, constant: -16).isActive = true
+        loginBotton.layer.shadowOffset = CGSize.zero
+        loginBotton.layer.cornerRadius = 16
         
 //Imagen Logo
         imageIcon.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
