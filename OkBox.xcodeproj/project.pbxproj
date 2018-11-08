@@ -10,13 +10,17 @@
 		AE5D0243B565870F97323DEF /* Pods_OkBoxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E888CB2A3EF1663653D15589 /* Pods_OkBoxTests.framework */; };
 		E425F8D1217D2EEE0049D1F6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E425F8D0217D2EEE0049D1F6 /* UIColor+Extension.swift */; };
 		E425F8D3217D3A270049D1F6 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E425F8D2217D3A270049D1F6 /* UITextField+Extension.swift */; };
+		E44DE9EE2180527600B739BE /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DE9ED2180527600B739BE /* VideoModel.swift */; };
+		E44DE9F02181233C00B739BE /* FireStoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DE9EF2181233C00B739BE /* FireStoreHelper.swift */; };
 		E4579C1B217BE49400EFC04F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4579C1A217BE49400EFC04F /* AppDelegate.swift */; };
-		E4579C1D217BE49400EFC04F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4579C1C217BE49400EFC04F /* ViewController.swift */; };
+		E4579C1D217BE49400EFC04F /* LogginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4579C1C217BE49400EFC04F /* LogginPageView.swift */; };
 		E4579C20217BE49400EFC04F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4579C1E217BE49400EFC04F /* Main.storyboard */; };
 		E4579C22217BE49500EFC04F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4579C21217BE49500EFC04F /* Assets.xcassets */; };
 		E4579C25217BE49500EFC04F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4579C23217BE49500EFC04F /* LaunchScreen.storyboard */; };
 		E4579C30217BE49500EFC04F /* OkBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4579C2F217BE49500EFC04F /* OkBoxTests.swift */; };
 		E4579C3B217BE92E00EFC04F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4579C3A217BE92D00EFC04F /* GoogleService-Info.plist */; };
+		E48D9DDF217F8AEA00B98342 /* HomeViewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48D9DDE217F8AEA00B98342 /* HomeViewCollectionViewController.swift */; };
+		E48D9DE1217F9A2A00B98342 /* SectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48D9DE0217F9A2A00B98342 /* SectionCell.swift */; };
 		FE0A35F6A335FCDAA0D20EC2 /* Pods_OkBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFD9DDAB5536751F6695B87 /* Pods_OkBox.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,9 +42,11 @@
 		C8C2B8CAAADCFD52FE1DB0C2 /* Pods-OkBoxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkBoxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OkBoxTests/Pods-OkBoxTests.release.xcconfig"; sourceTree = "<group>"; };
 		E425F8D0217D2EEE0049D1F6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		E425F8D2217D3A270049D1F6 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		E44DE9ED2180527600B739BE /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		E44DE9EF2181233C00B739BE /* FireStoreHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreHelper.swift; sourceTree = "<group>"; };
 		E4579C17217BE49300EFC04F /* OkBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4579C1A217BE49400EFC04F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4579C1C217BE49400EFC04F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4579C1C217BE49400EFC04F /* LogginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogginPageView.swift; sourceTree = "<group>"; };
 		E4579C1F217BE49400EFC04F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4579C21217BE49500EFC04F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4579C24217BE49500EFC04F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,9 @@
 		E4579C2F217BE49500EFC04F /* OkBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkBoxTests.swift; sourceTree = "<group>"; };
 		E4579C31217BE49500EFC04F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4579C3A217BE92D00EFC04F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E48D9DDE217F8AEA00B98342 /* HomeViewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCollectionViewController.swift; sourceTree = "<group>"; };
+		E48D9DE0217F9A2A00B98342 /* SectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCell.swift; sourceTree = "<group>"; };
+		E4B89BF4217E5C3300D51B7C /* OkBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OkBox.entitlements; sourceTree = "<group>"; };
 		E888CB2A3EF1663653D15589 /* Pods_OkBoxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkBoxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,6 +101,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E425F8D4217D6C640049D1F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4579C1C217BE49400EFC04F /* LogginPageView.swift */,
+				E48D9DDE217F8AEA00B98342 /* HomeViewCollectionViewController.swift */,
+				E44DE9EF2181233C00B739BE /* FireStoreHelper.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E425F8D5217D6C700049D1F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E48D9DE0217F9A2A00B98342 /* SectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E425F8D6217D6C800049D1F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E44DE9ED2180527600B739BE /* VideoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E4579C0E217BE49300EFC04F = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +150,12 @@
 		E4579C19217BE49300EFC04F /* OkBox */ = {
 			isa = PBXGroup;
 			children = (
+				E4B89BF4217E5C3300D51B7C /* OkBox.entitlements */,
+				E425F8D6217D6C800049D1F6 /* Model */,
+				E425F8D5217D6C700049D1F6 /* View */,
+				E425F8D4217D6C640049D1F6 /* Controller */,
 				E4579C3A217BE92D00EFC04F /* GoogleService-Info.plist */,
 				E4579C1A217BE49400EFC04F /* AppDelegate.swift */,
-				E4579C1C217BE49400EFC04F /* ViewController.swift */,
 				E4579C1E217BE49400EFC04F /* Main.storyboard */,
 				E4579C21217BE49500EFC04F /* Assets.xcassets */,
 				E4579C23217BE49500EFC04F /* LaunchScreen.storyboard */,
@@ -149,6 +187,7 @@
 				E4579C14217BE49300EFC04F /* Frameworks */,
 				E4579C15217BE49300EFC04F /* Resources */,
 				0D1D174B013930D2E0445821 /* [CP] Embed Pods Frameworks */,
+				C9AEA5CBDA06BCD9FB64965C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +229,11 @@
 				TargetAttributes = {
 					E4579C16217BE49300EFC04F = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					E4579C2A217BE49500EFC04F = {
 						CreatedOnToolsVersion = 9.3;
@@ -263,14 +307,36 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OkBox/Pods-OkBox-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +362,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C9AEA5CBDA06BCD9FB64965C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OkBox/Pods-OkBox-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OkBox/Pods-OkBox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -303,9 +393,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48D9DE1217F9A2A00B98342 /* SectionCell.swift in Sources */,
+				E48D9DDF217F8AEA00B98342 /* HomeViewCollectionViewController.swift in Sources */,
 				E425F8D1217D2EEE0049D1F6 /* UIColor+Extension.swift in Sources */,
+				E44DE9EE2180527600B739BE /* VideoModel.swift in Sources */,
 				E425F8D3217D3A270049D1F6 /* UITextField+Extension.swift in Sources */,
-				E4579C1D217BE49400EFC04F /* ViewController.swift in Sources */,
+				E44DE9F02181233C00B739BE /* FireStoreHelper.swift in Sources */,
+				E4579C1D217BE49400EFC04F /* LogginPageView.swift in Sources */,
 				E4579C1B217BE49400EFC04F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +561,7 @@
 			baseConfigurationReference = 4DD880A21C26068C7BD23B75 /* Pods-OkBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OkBox/OkBox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J26DXF285Q;
 				INFOPLIST_FILE = OkBox/Info.plist;
@@ -486,6 +581,7 @@
 			baseConfigurationReference = B23EE70DE19E7A231EAA0B38 /* Pods-OkBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OkBox/OkBox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J26DXF285Q;
 				INFOPLIST_FILE = OkBox/Info.plist;

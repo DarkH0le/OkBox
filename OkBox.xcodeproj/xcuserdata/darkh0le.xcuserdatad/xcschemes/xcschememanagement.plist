@@ -7,7 +7,20 @@
 		<key>OkBox.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>23</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E4579C16217BE49300EFC04F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4579C2A217BE49500EFC04F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

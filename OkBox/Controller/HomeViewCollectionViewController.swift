@@ -66,6 +66,11 @@ class HomeViewCollectionViewController: UICollectionViewController, UICollection
         return videos.count
     }
     
+    
+    //Aqui es donde tengo el problema profe!!!
+    //El collectionview se crea antes de conseguir toda la informacion de firestore, y como se crea antes no actualiza la las celdas
+    //despues, porque primero las crea y depues que crea las celdas y atraer la informacion de firebase, pero no se como
+    //traer la informacion de firebase antes de que se cree las celdas.
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SectionCell
         
